@@ -1,0 +1,40 @@
+
+div {
+  color : white;
+}
+
+body{
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.top-container {
+    background-color : cyan;
+padding: 20px;
+height: 200px;
+width: 200px;
+border: solid black 10px;
+
+}
+
+.middle-container {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  border: solid black 20px;
+  margin-left: 260px;
+
+}
+
+.bottom-container {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+  border: solid black 10px;
+  margin-left: 500px;
+}
