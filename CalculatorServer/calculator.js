@@ -8,13 +8,26 @@ app.use(bp.urlencoded({extended: true}));
 
 app.get("/", function (req, res)
 {
-  //C:/Users/eric9/OneDrive/Documents/webdev/CalculatorServer/webpage/
   res.sendFile(__dirname+"/webpage/index.html");
-//  res.sendFile(__dirname+"/webpage/styles.css");
 });
 
-app.post("/", function(req, res){
+app.get("/bmi-calculator", function (req, res)
+{
+  res.sendFile(__dirname+"/webpage/bmi-calculator.html");
+});
+
+app.post("/", function(req, res)
+{
   res.send("The result is "+ (Number(req.body.num1) + Number(req.body.num2)));
+});
+
+app.post("/bmi-calculator", function(req, res)
+{
+  var weight = parseFloat(req.body.weight);
+  var height = parseFloat(req.body.height);
+  var result = weight / (height * height);
+
+  res.send("The result is "+ result);
 });
 
 app.listen(3000, function(){
