@@ -4,6 +4,9 @@
 //739437d1600c3bd5efc971d7b6c20aa9-us5
 //8c654ef563
 
+//have to deploy using subtree bc server is in subdirectory of git repo
+//git subtree push --prefix NewsletterSignUp heroku master
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
