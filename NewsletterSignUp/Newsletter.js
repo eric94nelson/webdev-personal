@@ -52,7 +52,7 @@ app.post("/", function(req, res) {
     headers: {
       "Authorization": "eric94nelson 739437d1600c3bd5efc971d7b6c20aa9-us5"
     },
-    //body: memberDataString
+    body: memberDataString
   };
 
   request(options, function(error, response, body) {
@@ -64,6 +64,6 @@ app.post("/", function(req, res) {
   });
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server running on port 3000.");
 });
