@@ -1,9 +1,5 @@
 //jshint esversion:6
 
-//would hide these in an environment var instead of committing if commercial use
-//739437d1600c3bd5efc971d7b6c20aa9-us5
-//8c654ef563
-
 //have to deploy using subtree bc server is in subdirectory of git repo
 //git subtree push --prefix NewsletterSignUp heroku master
 
@@ -53,7 +49,7 @@ app.post("/", function(req, res) {
     url: "https://us5.api.mailchimp.com/3.0/lists/8c654ef563",
     method: "POST",
     headers: {
-      "Authorization": "eric94nelson 739437d1600c3bd5efc971d7b6c20aa9-us5"
+      "Authorization": "apikey "+process.env.MAILCHIMP_KEY
     },
     body: memberDataString
   };
