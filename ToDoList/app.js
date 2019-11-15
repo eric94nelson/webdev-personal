@@ -17,6 +17,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
+app.get('/about', function(req, res){
+  res.render("about");
+});
+
 app.get('/', function(req, res){
   var day = "";
   var today = new Date();
