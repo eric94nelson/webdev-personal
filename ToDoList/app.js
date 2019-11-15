@@ -7,11 +7,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
+const date = require(__dirname+"/date.js");
 
 
 const app = express();
 
-var tasks = ["Buy food", "Cook food", "Eat food"];
+const tasks = ["Buy food", "Cook food", "Eat food"];
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -22,22 +23,11 @@ app.get('/about', function(req, res){
 });
 
 app.get('/', function(req, res){
-  var day = "";
-  var today = new Date();
-  var options = {
-    weekday:"long",
-    day:"numeric",
-    month:"long"
-  };
-  var currentDay = today.toLocaleDateString("en-US", options);
-  res.render("list", {dayOfWeek:currentDay, myTasks:tasks});
-//  res.sendFile(__dirname+"/public/index.html");
+  res.render("list", {dayOfWeek:date.getDate(), myTasks:tasks});
 });
 
 app.post("/", function(req, res){
-  console.log(req.body.task);
   tasks.push(req.body.task);
-
   res.redirect("/");
 });
 
