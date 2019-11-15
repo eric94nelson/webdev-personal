@@ -14,6 +14,7 @@ const app = express();
 var tasks = ["Buy food", "Cook food", "Eat food"];
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){

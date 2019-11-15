@@ -3,18 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1><%=dayOfWeek%></h1>
-    <ul>
-      <%console.log(myTasks.length)%>
-      <% for (var i = 0; i < myTasks.length ; i++) {%>
-        <li> <%=myTasks[i]%> </li>
+    <div class="box" id="heading">
+      <h1><%=dayOfWeek%></h1>
+    </div>
+
+    <div class="box">
+      <% for (let i = 0; i < myTasks.length ; i++) {%>
+        <div class="item">
+          <input type="checkbox">
+          <p><%=myTasks[i]%></p>
+        </div>
       <% } %>
-    </ul>
-    <form action="/" method="post">
-      <input type="text" name="task" placeholder="What do you need to do?">
-      <button type="submit" name="button">Submit</button>
-    </form>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="task" placeholder="What do you need to do?" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+
+    </div>
+
+
   </body>
 </html>
