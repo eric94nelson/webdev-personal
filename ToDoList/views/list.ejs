@@ -5,7 +5,16 @@
     <title>To Do List</title>
   </head>
   <body>
-    hi
-    <h1>It's a <%=dayOfWeek%>!</h1>
+    <h1><%=dayOfWeek%></h1>
+    <ul>
+      <%console.log(myTasks.length)%>
+      <% for (var i = 0; i < myTasks.length ; i++) {%>
+        <li> <%=myTasks[i]%> </li>
+      <% } %>
+    </ul>
+    <form action="/" method="post">
+      <input type="text" name="task" placeholder="What do you need to do?">
+      <button type="submit" name="button">Submit</button>
+    </form>
   </body>
 </html>
