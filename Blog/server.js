@@ -4,9 +4,10 @@
 
 //jshint esversion:6
 
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require("lodash")
 
 const posts = [];
 
@@ -44,6 +45,19 @@ app.get("/contact", function(req, res){
 
 app.get("/post", function(req, res){
   res.render("compose");
+});
+
+app.get("/posts/:title", function(req, res){
+  console.log(req.params.title);
+
+  posts.forEach(function(post){
+    console.log(post.title);
+
+    if (_.lowerCase(post.title) === _.lowerCase(req.params.title)) {
+      res.render("post", {post:post});
+    }
+
+  });
 });
 
 app.listen(3000, function (){
