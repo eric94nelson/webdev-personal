@@ -1,6 +1,7 @@
 //npm init
 //npm install express body-parser request ejs
 //nodemon server
+//C:\Program Files\MongoDB\Server\4.2\data\
 
 //jshint esversion:6
 
