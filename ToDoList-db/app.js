@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB",{useNewUrlParser: true, useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://eric-admin:Test123@cluster0-grkvt.mongodb.net/todolistDB",{useNewUrlParser: true, useUnifiedTopology:true});
 mongoose.set('useFindAndModify', false);
 
 const itemsSchema = {
@@ -27,19 +27,19 @@ const listSchema = {
 
 const List = mongoose.model("List", listSchema);
 
-const buyFood = new Item({
-  name: "Buy Food"
+const welcome = new Item({
+  name: "Welcome to my ToDoList app using MongoDB"
 });
 
-const cookFood = new Item({
-  name: "Cook Food"
+const add = new Item({
+  name: "Enter text and hit '+' to add a new task"
 });
 
-const eatFood = new Item({
-  name: "Eat Food"
+const remove = new Item({
+  name: "<-- Hit the checkbox to delete tasks"
 });
 
-const items = [buyFood, cookFood, eatFood];
+const items = [welcome, add, remove];
 const workItems = [];
 
 app.get("/", function(req, res) {
@@ -159,6 +159,11 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+let port = process.env.PORT;
+if (port == null || port == ""){
+  port = 3000;
+}
+
+app.listen(port, function() {
+  console.log("Server started");
 });
