@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Eric Nelson</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">eric nelson</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="big-heading">Howdy stranger. Please take a look at some of my work!</h1>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/profilepic.jpg" alt="profilepic">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="white-section" id="multiproject">
+    <div style="padding-left: 7%; padding-top:20px">
+      <h4> My most recent focus has been on modern full-stack web frameworks.</h4>
+      <span style="font-style:italic">Note: Scroll carousel using arrows</span>
+    </div>
+    <div id="multiproject-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+
+
+        <div class="carousel-item active container-fluid">
+
+          <div class="media">
+            <a class="float-left" href="https://guarded-hamlet-36447.herokuapp.com/">
+              <img class="web-project-image" src="images/todolist.png">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="https://guarded-hamlet-36447.herokuapp.com/">
+                  Mongo ToDo List App
+                </a>
+              </h4>
+              <h5> Front End </h5>
+              Dynamic adding and deleting of list element views.
+              <h5> Back End </h5>
+              Store list elements in a MongoDB database.
+              <div class="logo-section">
+                <div class="btn btn-secondary noHover">node.js</div>
+                <div class="btn btn-secondary noHover">express.js</div>
+                <div class="btn btn-secondary noHover">MongoDB</div>
+                <div class="btn btn-secondary noHover">JavaScript</div>
+                <div class="btn btn-secondary noHover">EJS</div>
+                <div class="btn btn-secondary noHover">HTML/CSS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item container-fluid">
+          <div class="media">
+            <a class="float-left" href="https://newsletter-howdyboo.herokuapp.com/">
+              <img class="web-project-image" src="images/caynun.jpg">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="https://newsletter-howdyboo.herokuapp.com/">
+                  MailChimp Newsletter App
+                </a>
+              </h4>
+              <h5> Front End </h5>
+              Simple form using Bootstrap and forms.
+              <h5> Back End </h5>
+              Node server makes a MailChimp POST request and displays appropriate success or failure page.
+              <div class="logo-section">
+                <div class="btn btn-secondary noHover">node.js</div>
+                <div class="btn btn-secondary noHover">express.js</div>
+                <div class="btn btn-secondary noHover">JavaScript</div>
+                <div class="btn btn-secondary noHover">Bootstrap</div>
+                <div class="btn btn-secondary noHover">MailChimp API</div>
+                <div class="btn btn-secondary noHover">HTML/CSS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <div class="media">
+            <a class="float-left" href="https://github.com/eric94nelson">
+              <img class="web-project-image" src="images/github-icon.svg">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="https://github.com/eric94nelson">
+                  Github
+                </a>
+              </h4>
+              This git profile contains other undeployed web apps as well as serverless websites that I made as part of my full-stack bootcamp assignments through this <a href ="https://www.udemy.com/course/the-complete-web-development-bootcamp/">Udemy course. </a>
+              <br>
+              <div class="btn btn-secondary noHover">React</div>
+              <div class="btn btn-secondary noHover">Angular</div>
+              <div class="btn btn-secondary noHover">node.js</div>
+              <div class="btn btn-secondary noHover">express.js</div>
+              <div class="btn btn-secondary noHover">JavaScript</div>
+              <div class="btn btn-secondary noHover">Bootstrap</div>
+              <div class="btn btn-secondary noHover">HTML/CSS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <div class="media">
+            <a class="float-left" href="#">
+              <img class="web-project-image" src="images/profilepic.jpg">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                ... And this website!
+              </h4>
+              <div class="logo-section">
+                <div class="btn btn-secondary noHover">Bootstrap</div>
+                <div class="btn btn-secondary noHover">HTML/CSS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <a class="carousel-control-prev" href="#multiproject-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#multiproject-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
+
+  </section>
+
+  <!-- Playful -->
+
+  <section class="colored-section">
+
+    <div class="container-fluid">
+
+      <div class="media">
+        <a class="float-left" href="https://www.playfulstudios.com">
+          <img class="project-image" data-src="images/nslt.png" src="images/nslt.png">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading" style=" font-style: italic;">New Super Lucky's Tale (Nov 2019) Nintendo Switch. <br>
+            Super Lucky's Tale (Nov 2017) Xbox One X, PC/Steam. Guardian Trials DLC, Gilly Island DLC.<br>
+            Unannounced Online Multiplayer Game Prototype.</h4>
+          <h5> Back End and Web Tool </h5>
+          Wrote game server code to handle character connections and physics synchronization. Analytics reporting + storage + processing + stat visualization. Automated routine Git operations and TeamCity builds. Automated framerate heatmap image
+          creation across all 3d game levels with web interface. Created Asset Bundle packaging and patching system.
+          <h5> Game </h5>
+          3D Platforming player control. Camera system. Object-dither HLSL shaders. Localization. Visual logic blueprinting tool. Boss fight logic. Costume shop IAP. And more! <div class="media" data-src="images/nslt.png" src="images/nslt.png">
+
+          </div>
+
+          <div class="logo-section">
+            <img class="console-image" src="images/switch.png">
+            <img class="console-image" src="images/xbox.svg">
+            <img class="console-image" src="images/steam.svg">
+          </div>
+          <div class="logo-section">
+            <div class="btn btn-outline-light noHover">Unity</div>
+            <div class="btn btn-outline-light noHover">C#</div>
+            <div class="btn btn-outline-light noHover">Ruby</div>
+            <div class="btn btn-outline-light noHover">HTML/CSS</div>
+            <div class="btn btn-outline-light noHover">AWS</div>
+            <div class="btn btn-outline-light noHover">SQL</div>
+            <div class="btn btn-outline-light noHover">Heroku</div>
+            <div class="btn btn-outline-light noHover">S3</div>
+            <div class="btn btn-outline-light noHover">Redshift</div>
+            <div class="btn btn-outline-light noHover">HLSL Shaders</div>
+            <div class="btn btn-outline-light noHover">REST</div>
+            <div class="btn btn-outline-light noHover">Git</div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid" style="font-weight: bold">
+      Eric Nelson
+      <br>
+      <a href="https://www.linkedin.com/in/ericnels/">linkedin.com/in/ericnels/</a>
+      <br>
+      eric94nelson@gmail.com
+      <br>
+      713-562-5005
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
